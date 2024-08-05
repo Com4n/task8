@@ -1,0 +1,23 @@
+To generate the input file (mat.in), a Python script (generate_large_test_file.py) was used. This script creates a file with more than 100,000 lines, each line containing a matrix of random '1's and '0's with dimensions specified at the start of each line.
+
+Example of mat.in content:
+5x10:11010111001000111110101101110100001111111100000001
+9x5:110010101011010100000001001101010111111100111
+5x3:010101100011101
+
+The mat.py program reads this input file, processes each matrix to count isolated '1's, clusters of two '1's, and clusters of three '1's, and writes the results to mat.out.
+
+To demonstrate the correctness, here is an example:
+
+mat.in
+5x4:00010100010110000001
+
+The matrix is:
+0 0 0 1
+0 1 0 0
+0 1 0 1
+1 0 0 0
+0 0 0 1
+
+mat.out
+3 0 1
